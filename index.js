@@ -19,9 +19,11 @@ function increaseRankBy(n){
     var rankedLists=document.querySelectorAll(".ranked-list");
     for(let i=0;i<rankedLists.length;i++){
       var list=rankedLists[i];
-      Array.from(list.childNodes).forEach(function(value){
-        value.innerHTML(parseInt(value.innerHTML())+n);
+      var elements=list.querySelectorAll('li');
+      for(let j=0; j<elements.length;j++){
+        elements[j].innerHTML(parseInt(elements[j].innerHTML())+n);
+        
       }
-      );
+      
     }
 }
