@@ -21,8 +21,7 @@ function increaseRankBy(n){
       var list=rankedLists[i];
       var elements=list.querySelectorAll('li');
       for(let j=0; j<elements.length;j++){
-        console.log(elements[j]);
-        elements[j].innerHTML(parseInt(elements[j].innerHTML())+n);
+        elements[j].innerHTML=parseInt(elements[j].innerHTML)+n;
 
       }
 
